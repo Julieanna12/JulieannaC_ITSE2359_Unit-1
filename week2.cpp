@@ -3,14 +3,14 @@
 using namespace std;
 
 
-struct Student
+struct Student // Creating struct
 {
     string FullName;
     int Age;
     float GPA;
 };
 
-void printStudent(Student s)
+void printStudent(Student s) // Function for printing
 {
     cout << "Student Information:\n";
     cout << "Name: " << s.FullName << endl;
@@ -18,18 +18,6 @@ void printStudent(Student s)
     cout << "GPA: " << s.GPA << endl;
 
 }
- //int myFunction(Student x)
-
-        /*int ArrayLocation;
-        if (x.FullName = )
-        {
-             ++ArrayLocation;
-             return ArrayLocation
-        }
-             else 
-             {
-                return std::cout << "Name not found" << endl;
-            }*/
 
         
 
@@ -63,22 +51,24 @@ int main()
         cout << "File was not found" << endl;
     }
 
-    Student students[size];
+    Student students[size]; // Create the students array
     
   
-   for (int i = 0; i < size; ++i) // sorts the file's data into arrays
+   for (int i = 0; i < size; ++i) // sorts the file's data into array
    {
     StudentFile >> students[i].FullName;
     StudentFile >> students[i].Age;
     StudentFile >> students[i].GPA;
     
     }
-    for(int i = 0; i < size; ++i)
+    for(int i = 0; i < size; ++i) //prints all the data
     {
         printStudent(students[i]);
     }
     int counter = 0;
 
+
+// searches for a specific name
     string SearchName;
     cout << "\nEnter student's name that you are looking for:\n";
     cin >> SearchName;
