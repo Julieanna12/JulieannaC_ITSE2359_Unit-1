@@ -64,7 +64,7 @@ int main() {
 std::cout << endl << "Youngest age: " << youngest_age << endl << "These students are the younguest: ";
     for (int i = 1; i < size; ++i) // finds who is the youngest
         if (age[i] == youngest_age)
-            std::cout << name[i] << ",";
+            std::cout << name[i] << ","; 
 
    inFile.close();
 
