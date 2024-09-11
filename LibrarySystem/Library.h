@@ -11,10 +11,10 @@ using namespace std;
 class Library {
     private:
         vector<Book> inventory;
-        vector<Member> Members;
+        vector<Member> members;
 
     public:
-        void addBook(const Bool& book);
+        void addBook(const Book& book);
         void addMember(const Member& member);
 
         void checkoutBook(const string& bookTitle, Member& member);

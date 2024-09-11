@@ -3,7 +3,7 @@
 using namespace std;
 
 //default constructor
-Book::Book() : title(""), author(""), year(0), available(true) {}
+Book::Book() : title(""), author(""), yearPublished(0), available(true) {}
 
 //Parameterized constructor
 Book::Book(std::string title, std::string author, int year, bool available)
@@ -15,7 +15,7 @@ string Book::getTitle() const {
 }
 
 // Getter for the book author
-string Book::getAuthor() cosnt {
+string Book::getAuthor() const {
     return author;
 }
 

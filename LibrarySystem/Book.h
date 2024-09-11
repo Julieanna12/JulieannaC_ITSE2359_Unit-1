@@ -16,7 +16,7 @@ class Book{
         Book();
 
         //parametrized constructor
-        Book(string title, string author, int yearPublished, bool available - "false");
+        Book(string title, string author, int yearPublished, bool available = "true");
 
         //Getter
         string getTitle() const;
