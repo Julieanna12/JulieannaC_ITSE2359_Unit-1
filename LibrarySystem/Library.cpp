@@ -9,13 +9,13 @@ void Library::addBook(const Book& book) {
 }
 
 void Library::addMember(const Member& member) {
-    member.push_back(member);
+    members.push_back(member);
 }
 
 void Library::checkoutBook(const string& bookTitle, Member& member) {
     for (auto& book : inventory) {
         if (book.getTitle() == bookTitle && book.isAvailable()) {
-            customer.checkoutBook(book);
+            member.checkoutBook(book);
             break;
         }
     }
@@ -24,7 +24,7 @@ void Library::checkoutBook(const string& bookTitle, Member& member) {
 void Library::returnBook(const string& bookTitle, Member& member) {
     for (auto& book : inventory) {
         if (book.getTitle() == bookTitle && !book.isAvailable()) {
-            customer.returnBook(book);
+            member.returnBook(book);
             break;
         }
     }

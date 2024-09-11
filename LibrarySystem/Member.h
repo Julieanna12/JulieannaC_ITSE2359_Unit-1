@@ -10,7 +10,7 @@ using namespace std;
 class Member {
     private:
         string name;
-        vector<Book> checkedoutBooks;
+        vector<Book> CheckedoutBooks;
 
     public:
         Member();

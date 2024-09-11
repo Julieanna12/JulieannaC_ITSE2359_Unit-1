@@ -28,12 +28,18 @@ int main(){
     cout << endl;
     store.checkoutBook("Little Women", member1);
 
+    
+    cout << endl;
+    
+    member1.displayCheckedoutBooks();
+
+    cout << endl; 
+
     store.displayAvailableBooks();
     
     cout << endl;
     
-    customer1.displayCheckedoutBooks();
-    customer2.displayCheckedoutBookss();
+    member2.displayCheckedoutBooks();
 
     store.returnBook("Little Women", member1);
     cout << endl;

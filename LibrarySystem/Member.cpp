@@ -12,24 +12,24 @@ string Member::getName() const { return name; }
 
 void Member::checkoutBook(Book& book) {
     if (book.isAvailable()) {
-        book.rent();
-        checkedoutBooks.push_back(book);
+        book.checkout();
+        CheckedoutBooks.push_back(book);
     }
 }
 
-void Customer::returnBook(Book& book) {
-    for (size_t i = 0; i < checkedoutBooks.size(); i++) {
-        if (checkedoutBooks[i].getTitle() == book.getTitle()) {
+void Member::returnBook(Book& book) {
+    for (size_t i = 0; i < CheckedoutBooks.size(); i++) {
+        if (CheckedoutBooks[i].getTitle() == book.getTitle()) {
             book.returnBook();
-            checkedoutBooks.erase(checkedoutBooks.begin() + i);
+            CheckedoutBooks.erase(CheckedoutBooks.begin() + i);
             break;
         }
     }
 }
 
-void Customer::displayCheckedoutBooks() const {
-    cout << "Books rented by " << name << ":\n";
-    for (const auto& book : checkedoutBooks) {
-        cout << book.getTitle() << " (" << book.getYear() << ")\n";
+void Member::displayCheckedoutBooks() const {
+    cout << "Books checked out by " << name << ":\n";
+    for (const auto& book : CheckedoutBooks) {
+        cout << book.getTitle() << " (" << book.getYearPublished() << ")\n";
     }
 }
