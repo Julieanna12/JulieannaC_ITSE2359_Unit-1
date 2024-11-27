@@ -5,7 +5,7 @@
 using namespace std;
 
 // Constructor to initialize balance and account number
-BankAccount::BankAccount(const std::string& accNumber, double initialBalance) 
+BankAccount::BankAccount(const string& accNumber, double initialBalance) 
     : accountNumber(accNumber), balance(initialBalance) {}
 
 // Method to withdraw money
@@ -14,7 +14,7 @@ void BankAccount::withdraw(double amount) {
         throw InsufficientFunds();  // Throw InsufficientFunds exception
     }
     balance -= amount;
-    std::cout << "Withdrawal successful. New balance: " << balance << std::endl;
+    cout << "Withdrawal successful. New balance: " << balance << endl;
 }
 
 // Method to deposit money
@@ -23,7 +23,7 @@ void BankAccount::deposit(double amount) {
         throw NegativeDeposit();  // Throw NegativeDeposit exception
     }
     balance += amount;
-    std::cout << "Deposit successful. New balance: " << balance << std::endl;
+    cout << "Deposit successful. New balance: " << balance << endl;
 }
 
 // Getter for balance
