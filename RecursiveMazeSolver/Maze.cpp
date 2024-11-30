@@ -58,7 +58,7 @@ bool solveMaze(int x, int y) {
     // Up
     if (solveMaze(x - 1, y)) return true;
 
-    // Backtrack: If no path is found, unmark the current cell
+    // Backtrack: If no path is found, unmark current cell
     maze[x][y] = 0;
 
     return false;  // No solution found from this position
